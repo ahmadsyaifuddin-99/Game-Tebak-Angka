@@ -17,8 +17,8 @@ int main() {
     int guesses[MAX_GUESSES]; // Array untuk menyimpan tebakan pengguna
     char lagi;
 
-    cout << "                                 GAME TEBAK ANGKA ^_~\n";
-    cout << "-------------------------------------------------------------------------------------------\n";
+    cout << "                                                  GAME TEBAK ANGKA ^_~\n";
+    cout << "------------------------------------------------------------------------------------------------------------------------\n";
 
     cout << "Masukkan nama Anda: ";
     getline(cin, nama);
