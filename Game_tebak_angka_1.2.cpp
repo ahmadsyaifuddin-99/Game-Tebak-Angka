@@ -36,14 +36,14 @@ int main() {
         do {
             cout << "Masukkan angka : ";
             cin >> angka;
-            
+            cout << "\n";
 // Pemilihan If else
             if (angka < random) {
                 cout << "Angka kurang besar! \n";
             } else if (angka > random) {
                 cout << "Angka kurang kecil! \n";
             } else {
-                cout << "Anda benar! Anda menebak dalam " << percobaan + 1 << " percobaan.\n";
+                cout << "Anda benar! ^_^, Anda menebak dalam " << percobaan + 1 << " percobaan.\n";
             }
 
             if (percobaan < MAX_GUESSES) {
@@ -60,6 +60,8 @@ int main() {
         for (int i = 0; i < percobaan; i++) {
             cout << guesses[i] << " ";
         }
+        cout << "\n";
+        cout << "\n";
         cout << endl;
 
 // Pemilihan Switch
@@ -90,10 +92,12 @@ int main() {
 
                     cout << "Angka tertinggi yang ditebak: " << highest << endl;
                     cout << "Angka terendah yang ditebak: " << lowest << endl;
+                    cout << "\n";
                 } else {
                     cout << "Belum ada tebakan.\n";
                 }
                 break;
+                cout << "\n";
 
             case '2':
                 // Continue to the next game
@@ -101,11 +105,12 @@ int main() {
 
             case '3':
                 // Exit the program
-                cout << "Terima kasih, " << nama << "! Sampai jumpa lagi.\n";
+                cout << "Terima kasih ^_~, " << nama << "! Sampai jumpa lagi.\n";
                 return 0;
 
             default:
                 cout << "Pilihan tidak valid.\n";
+                return 0;
         }
 
     } while (true); // Infinite loop, exit condition handled within the switch statement
