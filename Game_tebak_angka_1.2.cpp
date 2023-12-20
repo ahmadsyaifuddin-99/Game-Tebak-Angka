@@ -68,7 +68,7 @@ int main() {
         // Switch statement for additional features
         char choice;
         cout << "Pilih fitur tambahan:\n";
-        cout << "1. Tampilkan angka tertinggi dan terendah dan main ulang\n";
+        cout << "1. Tampilkan angka tertinggi dan terendah lalu bermain ulang\n";
         cout << "2. Langsung Main ulang \n";
         cout << "3. Keluar\n";
         cout << "Pilih 1/2/3: ";
