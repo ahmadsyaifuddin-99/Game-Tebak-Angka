@@ -65,7 +65,7 @@ int main() {
         cout << endl;
 
 // Pemilihan Switch
-        // Switch statement for additional features
+        // Switch pernyataan untuk fitur tambahan
         char choice;
         cout << "Pilih fitur tambahan:\n";
         cout << "1. Tampilkan angka tertinggi dan terendah lalu bermain ulang\n";
@@ -77,7 +77,7 @@ int main() {
 
         switch (choice) {
             case '1':
-                // Display highest and lowest guessed numbers
+                // Menampilkan Tebakan Angka Tertinggi dan Terendah
                 if (percobaan > 0) {
                     int highest = guesses[0];
                     int lowest = guesses[0];
@@ -100,11 +100,11 @@ int main() {
                 cout << "\n";
 
             case '2':
-                // Continue to the next game
+                // Melanjutkan Permainan
                 break;
 
             case '3':
-                // Exit the program
+                // Keluar dari program
                 cout << "Terima kasih ^_~, " << nama << "! Sampai jumpa lagi.\n";
                 return 0;
 
