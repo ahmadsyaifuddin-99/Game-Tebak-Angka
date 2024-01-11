@@ -1,61 +1,69 @@
 #include <iostream>
+#include <string>
+// Menambahkan 2 Header cstdlib dan ctime
 #include <cstdlib>
 #include <ctime>
-#include <string>
 
 using namespace std;
 
 // Konstanta
-const int MAX_RANGE = 100; // Menentukan konstanta untuk rentang maksimum angka yg akan di tebak user/pengguna
+const int MAX_RANGE = 10; // Menentukan konstanta untuk rentang maksimum angka yg akan di tebak user/pengguna
 const int MAX_GUESSES = 10; // Menentukan konstanta untuk jumlah Maksimum untuk Tebakan angka yg ditebak pengguna
 
 int main() {
-
-// Tipe data
+    // Tipe data
     string nama; // Menambahkan variabel untuk menyimpan nama pengguna
-    int angka, random, percobaan = 0;
+    int angka, random, percobaan = 0; //untuk menangkap ataupun membuat Berupa Tipe data Angka Integer
     int guesses[MAX_GUESSES]; // Array untuk menyimpan tebakan pengguna
-    char lagi;
+    char choice; //untuk mengdeklarasikan nilai pemilihan pada Switch
+//	char lagi;
 
-// Mulai !
+    // Mulai !
     cout << "                                                  GAME TEBAK ANGKA ^_~\n";
     cout << "------------------------------------------------------------------------------------------------------------------------\n";
 
-    cout << "Masukkan nama Anda: ";    
+    cout << "Masukkan nama Anda: ";
     getline(cin, nama); // Mengambil atau Mendapatkan sebuah Inputan berupa string yg nanti akan di tampilkan
     cout << "\n";
 
-// Perulangan
+    // Perulangan
     do {
+        time_t start_time, end_time;
+        time(&start_time);
+
         cout << "Hai ^_^, " << nama << "! Selamat Datang di Game Tebak Angka, Game ini dapat Mengasah Insting mu ^_^ \nSilahkan Masukkan angka antara 1-" << MAX_RANGE << "\n";
         srand(time(NULL)); // membuat bibit/angka random
         
-// Operator
+	// Operator
         random = rand() % MAX_RANGE + 1; // mengacak angka 1 - MAX_RANGE
         percobaan = 0; // reset percobaan untuk setiap bermain ulang
-
+ 
         do {
             cout << "Masukkan angka : ";
             cin >> angka;
             cout << "\n";
-// Pemilihan If else
-            if (angka < random) {
+
+	// Pemilihan If else
+            if (angka < random) { //apabila angka yg dimasukkan terlalu kecil (kurang dari angka yg dibuat oleh sistem) maka akan menampilkan 'Angka kurang besar' 
                 cout << "Angka kurang besar! \n";
             } else if (angka > random) {
                 cout << "Angka kurang kecil! \n";
             } else {
+                time(&end_time); // membuat Perhitungan Waktu yg dibutuhkan oleh Pemain dalam menebak angka
                 cout << "Anda benar! ^_^, Anda menebak dalam " << percobaan + 1 << " percobaan.\n";
+                cout << "Waktu yang dibutuhkan untuk Menebak Angka: " << difftime(end_time, start_time) << " Detik\n";
             }
-
+		
+		// Melakukan Pengecekan Berapa jumlah angka yang telah user/pemain dalam melakukan tebakan
             if (percobaan < MAX_GUESSES) {
-            	
-// Simpan tebakan dalam array
-                guesses[percobaan] = angka;
+                guesses[percobaan] = angka; // Simpan tebakan dalam array
+
             }
 
             percobaan++;
-        } while (angka != random && percobaan < MAX_GUESSES);
-
+        } while (angka != random && percobaan < MAX_GUESSES); /* untuk melakukan perulangan selama angka yang ditebak oleh pengguna
+		belum sama dengan angka acak yang dihasilkan oleh program, dan jumlah percobaan belum mencapai batas maksimum. */
+		
         // Menampilkan tebakan pengguna
         cout << "Hasil Tebakan anda: ";
         for (int i = 0; i < percobaan; i++) {
@@ -65,9 +73,8 @@ int main() {
         cout << "\n";
         cout << endl;
 
-// Pemilihan Switch
+        // Pemilihan Switch
         // Switch pernyataan untuk fitur tambahan
-        char choice;
         cout << "Pilih fitur tambahan:\n";
         cout << "1. Tampilkan angka tertinggi dan terendah lalu bermain ulang\n";
         cout << "2. Langsung Main ulang \n";
