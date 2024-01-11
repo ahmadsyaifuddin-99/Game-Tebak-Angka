@@ -7,8 +7,8 @@
 using namespace std;
 
 // Konstanta
-const int MAX_RANGE = 10; // Menentukan konstanta untuk rentang maksimum angka yg akan di tebak user/pengguna
-const int MAX_GUESSES = 10; // Menentukan konstanta untuk jumlah Maksimum untuk Tebakan angka yg ditebak pengguna
+const int MAX_RANGE = 100; // Menentukan konstanta untuk rentang maksimum angka yg akan di tebak user/pengguna
+const int MAX_GUESSES = 15; // Menentukan konstanta untuk jumlah Maksimum untuk Tebakan angka yg ditebak pengguna
 
 int main() {
     // Tipe data
