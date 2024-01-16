@@ -73,7 +73,7 @@ int main() {
 
         // Pemilihan Switch
 //        cout << "Pilih fitur tambahan:\n";
-        cout << "1. Tampilkan angka tertinggi\n";
+        cout << "1. Tampilkan angka Tertinggi & Terendah\n";
         cout << "2. Melanjutkan Permainan\n";
         cout << "3. Keluar\n";
         cout << "Pilih 1/2/3: ";
