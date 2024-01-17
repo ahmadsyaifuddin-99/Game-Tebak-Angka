@@ -101,7 +101,7 @@ int main() {
                     cout << "Angka terendah yang ditebak: " << lowest << endl;
                     cout << "\n";
 
-                    // Nested if untuk pilihan case no 2 dan no 3
+                    // Nested if/if bersarang untuk pilihan case no 2 dan no 3
                     cout << "Pilih langkah selanjutnya:\n";
                     cout << "1. Melanjutkan Permainan\n";
                     cout << "2. Keluar\n";

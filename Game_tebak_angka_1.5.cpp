@@ -16,7 +16,7 @@ int main() {
     int angka, random, percobaan = 0; //untuk menangkap ataupun membuat Berupa Tipe data Angka Integer
     int guesses[MAX_GUESSES]; // Array untuk menyimpan tebakan pengguna
     char choice; //untuk mengdeklarasikan nilai pemilihan pada Switch
-//	char lagi;
+
 
     // Mulai !
     cout << "                                                  GAME TEBAK ANGKA ^_~\n";
